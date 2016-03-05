@@ -1,13 +1,13 @@
 Deploy
 ======
 
-Resources and documentation required to deploy this app.
+Get an AWS account, and create an EC2 instance with Ubuntu LTS.
 
-# Nginx and Passenger #
+Resources and documentation required to deploy this app to an amazon ec2 server.
 
-This deploy uses nginx and passenger.
+Install nginx and passenger according to these directions [here](https://www.phusionpassenger.com/library/install/nginx/install/oss/).
 
-# Nginx #
+# Configure Nginx #
 
 Create the `main.d` directory in the `nginx` directory.
 
