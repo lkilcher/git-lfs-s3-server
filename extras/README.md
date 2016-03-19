@@ -5,7 +5,7 @@ Get an AWS account, and create an EC2 instance with Ubuntu LTS.
 
 Resources and documentation required to deploy this app to an amazon ec2 server.
 
-Install nginx and passenger according to these directions [here](https://www.phusionpassenger.com/library/install/nginx/install/oss/).
+Install nginx and passenger according to [these directions](https://www.phusionpassenger.com/library/install/nginx/install/oss/).
 
 # Configure Nginx #
 
@@ -48,9 +48,24 @@ Install [rvm](https://rvm.io/).
 ```bash
 rvm install ruby-2.2.3
 rvm use ruby-2.2.3
+```
+
+Install bundle if you don't already have it.
+
+```bash
+gem install bundler
+```
+
+```bash
 cd /path/to/git-lfs-s3-server/
 bundle
 ln -s /etc/nginx/conf.d/ /path/to/git-lfs-s3-server/extra/passenger.conf
+```
+
+If you get an error saying you can't build `ffi`, try this:
+
+```bash
+apt-get install libgmp3-dev
 ```
 
 Note: that passenger.conf is configured to use rvm ruby-2.2.3.
